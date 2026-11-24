@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europe Travel Guide</title>
+  <style>
+    /* Basic styles for the whole page */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f2;
+      color: #263b32;
+      line-height: 1.6;
+    }
+    header {
+      background: #315b49;
+      color: white;
+      padding: 20px 8%;
+    }
+    header h1 { margin: 0; font-size: 27px; }
+    nav { margin-top: 12px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 22px;
+      font-size: 15px;
+    }
+    nav a:hover { text-decoration: underline; }
+    .hero {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+    .hero-text { flex: 1; }
+    .hero-text h2 { font-size: 38px; line-height: 1.2; margin: 0 0 15px; }
+    .hero-text p { color: #526158; }
+    .hero-image { flex: 1.2; position: relative; }
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+    .image-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      background: rgba(0,0,0,.6);
+      color: white;
+      padding: 5px 9px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    .slider-buttons { margin-top: 8px; text-align: right; }
+    button, .main-link {
+      background: #315b49;
+      color: white;
+      border: 0;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    button:hover, .main-link:hover { background: #244636; }
+    .intro {
+      background: #e2eadf;
+      text-align: center;
+      padding: 20px;
+      color: #40564a;
+    }
+    section.content {
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+    section.content > h2 { margin-bottom: 5px; }
+    .section-description { color: #66736b; margin-top: 0; }
+    .destination-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+    .destination {
+      background: white;
+      border: 1px solid #d8dfd7;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .destination img { width: 100%; height: 165px; object-fit: cover; display: block; }
+    .destination-info { padding: 12px; }
+    .destination-info h3 { margin: 0; font-size: 18px; }
+    .destination-info p { margin: 4px 0 0; font-size: 13px; color: #66736b; }
+    .planning {
+      background: #e2eadf;
+      padding: 35px 20px;
+    }
+    .planning-inner { max-width: 1060px; margin: auto; }
+    .planning-inner > p { color: #526158; }
+    .planning-list { display: flex; gap: 15px; margin-top: 20px; }
+    .planning-item {
+      background: white;
+      border: 1px solid #d8dfd7;
+      border-radius: 5px;
+      padding: 15px;
+      flex: 1;
+    }
+    .planning-item h3 { font-size: 16px; margin: 0 0 6px; }
+    .planning-item p { font-size: 13px; color: #66736b; margin: 0; }
+    .newsletter {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 25px 20px;
+      text-align: center;
+    }
+    .newsletter form { margin-top: 15px; }
+    .newsletter input { padding: 10px; width: 240px; border: 1px solid #aebbb0; border-radius: 4px; }
+    #message { color: #315b49; font-size: 14px; }
+    footer {
+      background: #315b49;
+      color: white;
+      padding: 22px 8%;
+      font-size: 13px;
+    }
+    footer a { color: white; margin-right: 15px; }
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: stretch; }
+      .hero-text h2 { font-size: 32px; }
+      .hero-image img { height: 260px; }
+      .destination-list { grid-template-columns: repeat(2, 1fr); }
+      .planning-list { flex-direction: column; }
+      nav a { display: inline-block; margin: 5px 12px 5px 0; }
+    }
+    @media (max-width: 430px) {
+      .destination-list { grid-template-columns: 1fr; }
+      .newsletter input { width: 100%; margin-bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Europe Travel Guide</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#planning">Travel planning</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Explore Europe your way</h2>
+        <p>Welcome to my Europe Travel Guide. Here you can find ideas for places to visit and a few tips to help you plan a trip.</p>
+        <a class="main-link" href="#destinations">See destinations</a>
+      </div>
+      <div class="hero-image">
+        <img id="mainImage" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80" alt="Houses along the coast in Italy">
+        <span class="image-caption" id="caption">Cinque Terre, Italy</span>
+        <div class="slider-buttons">
+          <button type="button" onclick="changeSlide(-1)">Previous</button>
+          <button type="button" onclick="changeSlide(1)">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="intro" id="about">There are lots of different places to see in Europe, from busy cities to quiet beaches.</div>
+
+    <section class="content" id="destinations">
+      <h2>Popular Destinations</h2>
+      <p class="section-description">Here are four places you could add to your trip.</p>
+      <div class="destination-list">
+        <article class="destination">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80" alt="Paris and the Eiffel Tower" loading="lazy">
+          <div class="destination-info"><h3>Paris, France</h3><p>See the Eiffel Tower, museums and cafés.</p></div>
+        </article>
+        <article class="destination">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=700&q=80" alt="A Greek island village" loading="lazy">
+          <div class="destination-info"><h3>Santorini, Greece</h3><p>Visit the island and enjoy the sea views.</p></div>
+        </article>
+        <article class="destination">
+          <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=700&q=80" alt="Buildings in Florence" loading="lazy">
+          <div class="destination-info"><h3>Florence, Italy</h3><p>Explore art, old buildings and Italian food.</p></div>
+        </article>
+        <article class="destination">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80" alt="A view of London" loading="lazy">
+          <div class="destination-info"><h3>London, England</h3><p>See famous sights and explore different areas.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="planning" id="planning">
+      <div class="planning-inner">
+        <h2>Travel Planning</h2>
+        <p>A few things to think about before you go:</p>
+        <div class="planning-list">
+          <div class="planning-item"><h3>1. Pick a time to travel</h3><p>Check the weather and decide what season suits you.</p></div>
+          <div class="planning-item"><h3>2. Plan your transport</h3><p>Look at trains, buses or flights between places.</p></div>
+          <div class="planning-item"><h3>3. Make a budget</h3><p>Remember to include food, accommodation and activities.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Travel tips by email</h2>
+      <p>Sign up for the sample newsletter.</p>
+      <form id="emailForm">
+        <input type="email" placeholder="Your email address" aria-label="Your email address" required>
+        <button type="submit">Sign up</button>
+      </form>
+      <p id="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Europe Travel Guide | A student sample website</p>
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#planning">Travel planning</a>
+  </footer>
+
+  <script>
+    // The image and caption change when one of the buttons is clicked.
+    const slides = [
+      {
+        image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80',
+        caption: 'Cinque Terre, Italy',
+        description: 'Houses along the coast in Italy'
+      },
+      {
+        image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80',
+        caption: 'Paris, France',
+        description: 'The Eiffel Tower in Paris'
+      },
+      {
+        image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80',
+        caption: 'Santorini, Greece',
+        description: 'A village on a Greek island'
+      }
+    ];
+    let slideNumber = 0;
+
+    function changeSlide(direction) {
+      slideNumber = slideNumber + direction;
+      if (slideNumber >= slides.length) slideNumber = 0;
+      if (slideNumber < 0) slideNumber = slides.length - 1;
+
+      document.getElementById('mainImage').src = slides[slideNumber].image;
+      document.getElementById('mainImage').alt = slides[slideNumber].description;
+      document.getElementById('caption').textContent = slides[slideNumber].caption;
+    }
+
+    // This is a sample form, so it shows a message instead of sending an email.
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('message').textContent = 'Thanks for signing up!';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
