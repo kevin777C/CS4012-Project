@@ -109,37 +109,71 @@ footer a {
 }
 
 /* Contact form */
-form {
+#contactForm {
   max-width: 500px;
 }
 
-form label {
+#contactForm label {
   display: block;
   font-weight: bold;
   margin-top: 10px;
 }
 
-form input,
-form textarea {
+#contactForm input,
+#contactForm textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #aebbb0;
   border-radius: 4px;
 }
 
-form button {
+#contactForm button {
   margin-top: 15px;
 }
 
-#formMessage {
-  font-weight: bold;
+/* ===== PLAN YOUR TRIP PAGE (Person 3) ===== */
+
+/* Intro heading */
+.hero { max-width: 1100px; margin: 35px auto 0; padding: 0 20px; }
+.hero-text h2 { font-size: 38px; line-height: 1.2; margin: 0 0 15px; }
+.hero-text p { color: #526158; }
+
+/* Centred content sections */
+section.content { max-width: 1100px; margin: 45px auto; padding: 0 20px; }
+
+/* Budget summary background */
+.planning { background: #e2eadf; padding: 35px 20px; }
+.planning-inner { max-width: 1060px; margin: auto; }
+
+/* White boxes around each part of the form */
+fieldset { background: white; border: 1px solid #d8dfd7; border-radius: 5px; margin-bottom: 18px; padding: 15px; }
+legend { font-weight: bold; }
+
+/* Labels sit above the input boxes (only on the plan form) */
+#plan-form label { display: block; margin: 10px 0 4px; }
+
+/* Input boxes */
+#plan-form input[type="text"],
+#plan-form input[type="date"],
+#plan-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aebbb0;
+  border-radius: 4px;
 }
 
+/* Radio buttons next to their text */
+#plan-form input[type="radio"] { margin-right: 6px; }
 
-/* ===== MOBILE ===== */
+/* Big green totals in the summary */
+.planning strong { font-size: 22px; color: #315b49; }
 
+/* Cost breakdown table */
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid #d8dfd7; }
+th { background: #e2eadf; }
+
+/* Smaller screens (phones) */
 @media (max-width: 700px) {
-  .tips {
-    flex-direction: column;
-  }
+  .hero-text h2 { font-size: 32px; }
 }
