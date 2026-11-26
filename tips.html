@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Tips - Explore Europe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header and menu -->
+  <header>
+    <h1>Explore Europe</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="plan.html">Plan Your Trip</a>
+      <a href="tips.html">Travel Tips</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Introduction -->
+    <section class="intro">
+      <h2>Small Preparations Make Better Journeys</h2>
+      <p>A little planning before your trip can save you time, money and stress. On this page you will find travel tips, a packing checklist and answers to common questions.</p>
+    </section>
+
+    <!-- Travel tips -->
+    <section>
+      <h2>Travel Tips</h2>
+      <div class="tips">
+        <article class="tip">
+          <h3>Check Travel Documents</h3>
+          <p>Make sure your passport or ID is valid for your whole trip. Keep a photo of it on your phone in case you lose it.</p>
+        </article>
+        <article class="tip">
+          <h3>Plan Your Spending</h3>
+          <p>Set a daily budget for food, transport and activities. Bring some cash because not every place takes cards.</p>
+        </article>
+        <article class="tip">
+          <h3>Know Your Transport</h3>
+          <p>Europe has great trains and buses. Booking early is usually cheaper.</p>
+        </article>
+        <article class="tip">
+          <h3>Preparation Before Travelling</h3>
+          <p>Check the weather, download offline maps and remember that 112 is the emergency number in the EU.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Packing checklist -->
+    <section class="green-box">
+      <h2>Packing Checklist</h2>
+      <p>Tick the items you have packed.</p>
+      <p id="count">0 out of 8 items packed</p>
+
+      <ul class="checklist">
+        <li><input type="checkbox" class="item" id="item1"> <label for="item1">Passport / ID</label></li>
+        <li><input type="checkbox" class="item" id="item2"> <label for="item2">Travel Documents</label></li>
+        <li><input type="checkbox" class="item" id="item3"> <label for="item3">Wallet and Bank Cards</label></li>
+        <li><input type="checkbox" class="item" id="item4"> <label for="item4">Phone and Charger</label></li>
+        <li><input type="checkbox" class="item" id="item5"> <label for="item5">Clothing</label></li>
+        <li><input type="checkbox" class="item" id="item6"> <label for="item6">Toiletries</label></li>
+        <li><input type="checkbox" class="item" id="item7"> <label for="item7">Medication</label></li>
+        <li><input type="checkbox" class="item" id="item8"> <label for="item8">Travel Adapter</label></li>
+      </ul>
+
+      <p id="packedMessage"></p>
+      <button id="resetButton">Reset Checklist</button>
+    </section>
+
+    <!-- Frequently asked questions -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How early should I plan a trip?</h3>
+      <p>It is best to start planning two or three months before you travel. Flights and hotels are usually cheaper if you book early.</p>
+
+      <h3>Should I carry travel insurance?</h3>
+      <p>Yes. Travel insurance can help if you get sick, lose your bags or your trip is cancelled.</p>
+
+      <h3>Where can I check official travel advice?</h3>
+      <p>Check your government's travel advice website, for example the Department of Foreign Affairs in Ireland.</p>
+    </section>
+
+    <!-- Audio -->
+    <section class="green-box">
+      <h2>Listen to Our Travel Tips</h2>
+      <audio controls>
+        <source src="audio/travel-tips.m4a" type="audio/mp4">
+        Your browser does not support audio.
+      </audio>
+    </section>
+
+    <!-- Contact form -->
+    <section>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name">
+
+        <label for="email">Email Address</label>
+        <input type="text" id="email">
+
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Explore Europe - Your journey starts here</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="destinations.html">Destinations</a> |
+      <a href="plan.html">Plan Your Trip</a> |
+      <a href="tips.html">Travel Tips</a>
+    </p>
+    <p>Email: hello@exploreeurope.com</p>
+  </footer>
+
+  <script src="js/tips.js"></script>
+</body>
+</html>
