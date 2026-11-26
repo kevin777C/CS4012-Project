@@ -271,6 +271,7 @@
       if (slideNumber < 0) slideNumber = slides.length - 1;
 
       // Update the picture, accessible description and visible caption together.
+      document.getElementById('mainImage').src = slides[slideNumber].image;
       document.getElementById('mainImage').alt = slides[slideNumber].description;
       document.getElementById('caption').textContent = slides[slideNumber].caption;
     }
