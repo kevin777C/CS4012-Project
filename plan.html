@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page fit phone screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan Your Trip | Explore Europe</title>
+  <!-- Link to the shared CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header and menu (same on every page) -->
+  <header>
+    <h1>Europe Travel Guide</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="plan.html">Plan your trip</a>
+      <a href="tips.html">Travel tips</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. Introduction: page title and short text -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Plan a Trip That Fits Your Budget</h2>
+        <p>Enter your trip details and costs below. We will work out the total and what each traveller pays.</p>
+      </div>
+    </section>
+
+    <!-- The form: calculate() runs every time something is typed -->
+    <section class="content">
+      <form id="plan-form" oninput="calculate()">
+
+        <!-- 2. Trip details -->
+        <fieldset>
+          <legend>Trip details</legend>
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" placeholder="e.g. Manchester">
+
+          <label for="departure">Departure date</label>
+          <input type="date" id="departure">
+
+          <label for="return">Return date</label>
+          <input type="date" id="return">
+
+          <label for="travellers">Number of travellers</label>
+          <!-- min="1" means at least one traveller -->
+          <input type="number" id="travellers" min="1" value="1">
+        </fieldset>
+
+        <!-- 3. Transport: the visitor chooses one -->
+        <fieldset>
+          <legend>Transport</legend>
+          <label><input type="radio" name="transport" value="Flight" checked> Flight</label>
+          <label><input type="radio" name="transport" value="Train"> Train</label>
+          <label><input type="radio" name="transport" value="Car"> Car</label>
+          <label><input type="radio" name="transport" value="Bus"> Bus</label>
+        </fieldset>
+
+        <!-- 4. Budget calculator (cost for the whole group) -->
+        <fieldset>
+          <legend>Budget (€ for the whole group)</legend>
+          <label for="accommodation">Accommodation cost</label>
+          <input type="number" id="accommodation" min="0" placeholder="0">
+
+          <label for="transport-cost">Transport cost</label>
+          <input type="number" id="transport-cost" min="0" placeholder="0">
+
+          <label for="food">Food budget</label>
+          <input type="number" id="food" min="0" placeholder="0">
+
+          <label for="activities">Activities cost</label>
+          <input type="number" id="activities" min="0" placeholder="0">
+        </fieldset>
+
+        <!-- Reset button: runs resetForm() in plan.js -->
+        <button type="button" onclick="resetForm()">Reset</button>
+      </form>
+    </section>
+
+    <!-- 5. Budget summary  -->
+    <section class="planning">
+      <div class="planning-inner">
+        <h2>Budget summary</h2>
+        <p>Estimated total cost: <strong id="total-cost">€0.00</strong></p>
+        <p>Estimated cost per traveller: <strong id="per-person">€0.00</strong></p>
+        <p id="summary-message">Enter your costs to see your estimate.</p>
+      </div>
+    </section>
+
+    <!-- 6. Cost breakdown with atable explaining each cost, with a tip -->
+    <section class="content">
+      <h2>Cost breakdown</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>What it covers</th>
+            <th>Tip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Accommodation</td>
+            <td>Hotels, hostels, apartments</td>
+            <td>Book early and compare prices.</td>
+          </tr>
+          <tr>
+            <td>Transport</td>
+            <td>Flights, trains, buses, car hire</td>
+            <td>Book in advance and check baggage fees.</td>
+          </tr>
+          <tr>
+            <td>Food</td>
+            <td>Meals, snacks, drinks</td>
+            <td>Eat where locals eat and try markets.</td>
+          </tr>
+          <tr>
+            <td>Activities</td>
+            <td>Museums, tours, tickets</td>
+            <td>Look for city passes and free days.</td>
+          </tr>
+        </tbody>
+     </table>
+    </section>
+  </main>
+
+  <!-- Footer with links same on every page -->
+  <footer>
+    <p>Europe Travel Guide | A student sample website</p>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="plan.html">Plan your trip</a>
+    <a href="tips.html">Travel tips</a>
+  </footer>
+
+  <!-- Link to the JavaScript file at the end so the page loads first) -->
+  <script src="js/plan.js"></script>
+</body>
+</html>

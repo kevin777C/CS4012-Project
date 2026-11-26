@@ -1,0 +1,55 @@
+/* ===== Plan page (Person 3) ===== */
+/* Colours and fonts match Person 1's home page */
+
+/* --- Shared styles from Person 1 (delete if already in style.css) --- */
+* { box-sizing: border-box; }   /* padding doesn't make boxes wider */
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f2; color: #263b32; line-height: 1.6; }   /* page background, font, text colour */
+header { background: #315b49; color: white; padding: 20px 8%; }   /* green top bar */
+header h1 { margin: 0; font-size: 27px; }   /* site title */
+nav { margin-top: 12px; }   /* space above the menu */
+nav a { color: white; text-decoration: none; margin-right: 22px; font-size: 15px; }   /* menu links */
+nav a:hover { text-decoration: underline; }   /* underline when hovered */
+.hero { max-width: 1100px; margin: 35px auto 0; padding: 0 20px; }   /* intro area, centred */
+.hero-text h2 { font-size: 38px; line-height: 1.2; margin: 0 0 15px; }   /* big heading */
+.hero-text p { color: #526158; }   /* grey-green paragraph */
+button { background: #315b49; color: white; border: 0; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px; }   /* green buttons */
+button:hover { background: #244636; }   /* darker green on hover */
+section.content { max-width: 1100px; margin: 45px auto; padding: 0 20px; }   /* centred content sections */
+.planning { background: #e2eadf; padding: 35px 20px; }   /* light green summary background */
+.planning-inner { max-width: 1060px; margin: auto; }   /* keeps summary text centred */
+footer { background: #315b49; color: white; padding: 22px 8%; font-size: 13px; }   /* green bottom bar */
+footer a { color: white; margin-right: 15px; }   /* footer links */
+
+/* --- Plan page styles --- */
+
+/* White boxes around each part of the form */
+fieldset { background: white; border: 1px solid #d8dfd7; border-radius: 5px; margin-bottom: 18px; padding: 15px; }
+legend { font-weight: bold; }   /* box titles */
+
+/* Labels sit above the input boxes */
+label { display: block; margin: 10px 0 4px; }
+
+/* Input boxes */
+input[type="text"], input[type="date"], input[type="number"] {
+  width: 100%;   /* fill the box */
+  padding: 10px;
+  border: 1px solid #aebbb0;
+  border-radius: 4px;
+}
+
+/* Radio buttons next to their text */
+input[type="radio"] { margin-right: 6px; }
+
+/* Big green totals in the summary */
+.planning strong { font-size: 22px; color: #315b49; }
+
+/* Cost breakdown table */
+table { width: 100%; border-collapse: collapse; background: white; }   /* joins the cell borders */
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid #d8dfd7; }   /* table cells */
+th { background: #e2eadf; }   /* light green header row */
+
+/* for Smaller screens (phones) */
+@media (max-width: 700px) {
+  .hero-text h2 { font-size: 32px; }   /* smaller heading */
+  nav a { display: inline-block; margin: 5px 12px 5px 0; }   /* menu wraps neatly */
+}
