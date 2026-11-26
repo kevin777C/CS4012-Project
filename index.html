@@ -28,7 +28,9 @@
       font-size: 15px;
     }
     nav a:hover { text-decoration: underline; }
+    /* Flexbox aligns the introduction and featured image on wide screens. */
     .hero {
+      max-width: 1100px;
       max-width: 1100px;
       margin: 35px auto;
       padding: 0 20px;
@@ -82,7 +84,9 @@
     }
     section.content > h2 { margin-bottom: 5px; }
     .section-description { color: #66736b; margin-top: 0; }
+    /* CSS Grid arranges the destination cards in evenly sized columns. */
     .destination-list {
+      display: grid;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
@@ -130,21 +134,27 @@
       font-size: 13px;
     }
     footer a { color: white; margin-right: 15px; }
+    /* At smaller widths, the page stacks sections and reduces the card columns. */
     @media (max-width: 700px) {
-      .hero { flex-direction: column; align-items: stretch; }
+      /* Flexbox aligns the introduction and featured image on wide screens. */
+    .hero {
+      flex-direction: column; align-items: stretch; }
       .hero-text h2 { font-size: 32px; }
       .hero-image img { height: 260px; }
-      .destination-list { grid-template-columns: repeat(2, 1fr); }
+      /* CSS Grid arranges the destination cards in evenly sized columns. */
+    .destination-list { grid-template-columns: repeat(2, 1fr); }
       .planning-list { flex-direction: column; }
       nav a { display: inline-block; margin: 5px 12px 5px 0; }
     }
     @media (max-width: 430px) {
-      .destination-list { grid-template-columns: 1fr; }
+      /* CSS Grid arranges the destination cards in evenly sized columns. */
+    .destination-list { grid-template-columns: 1fr; }
       .newsletter input { width: 100%; margin-bottom: 10px; }
     }
   </style>
 </head>
 <body>
+  <!-- The header contains the site title and navigation links. -->
   <header>
     <h1>Europe Travel Guide</h1>
     <nav>
@@ -156,6 +166,7 @@
   </header>
 
   <main id="home">
+    <!-- The hero introduces the guide and contains the image slider. -->
     <section class="hero">
       <div class="hero-text">
         <h2>Explore Europe your way</h2>
@@ -174,6 +185,7 @@
 
     <div class="intro" id="about">There are lots of different places to see in Europe, from busy cities to quiet beaches.</div>
 
+    <!-- Each article in this section is one destination card. -->
     <section class="content" id="destinations">
       <h2>Popular Destinations</h2>
       <p class="section-description">Here are four places you could add to your trip.</p>
@@ -197,6 +209,7 @@
       </div>
     </section>
 
+    <!-- These cards give visitors a few basic trip planning reminders. -->
     <section class="planning" id="planning">
       <div class="planning-inner">
         <h2>Travel Planning</h2>
@@ -209,6 +222,7 @@
       </div>
     </section>
 
+    <!-- The sample form shows an on-page message after submission. -->
     <section class="newsletter">
       <h2>Travel tips by email</h2>
       <p>Sign up for the sample newsletter.</p>
@@ -229,6 +243,7 @@
 
   <script>
     // The image and caption change when one of the buttons is clicked.
+    // Each slide stores an image URL, caption and accessible description.
     const slides = [
       {
         image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80',
@@ -246,14 +261,16 @@
         description: 'A village on a Greek island'
       }
     ];
+    // Keep track of which slide is currently displayed.
     let slideNumber = 0;
 
+    // Move by one slide and wrap around when reaching either end.
     function changeSlide(direction) {
       slideNumber = slideNumber + direction;
       if (slideNumber >= slides.length) slideNumber = 0;
       if (slideNumber < 0) slideNumber = slides.length - 1;
 
-      document.getElementById('mainImage').src = slides[slideNumber].image;
+      // Update the picture, accessible description and visible caption together.
       document.getElementById('mainImage').alt = slides[slideNumber].description;
       document.getElementById('caption').textContent = slides[slideNumber].caption;
     }
@@ -267,3 +284,9 @@
   </script>
 </body>
 </html>
+
+
+
+
+
+
