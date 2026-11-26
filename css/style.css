@@ -1,0 +1,145 @@
+/* ===== GENERAL STYLES (used on every page) ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f2;
+  color: #263b32;
+}
+
+header {
+  background-color: #315b49;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 20px 8%;
+}
+
+button {
+  background-color: #315b49;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #244636;
+}
+
+footer {
+  background-color: #315b49;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+}
+
+
+/* ===== TRAVEL TIPS PAGE (Person 4) ===== */
+
+.intro {
+  background-color: #e2eadf;
+  text-align: center;
+}
+
+.green-box {
+  background-color: #e2eadf;
+}
+
+/* Tip boxes side by side */
+.tips {
+  display: flex;
+  gap: 15px;
+}
+
+.tip {
+  background-color: white;
+  border: 1px solid #d8dfd7;
+  border-radius: 6px;
+  padding: 15px;
+  flex: 1;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+#count {
+  font-weight: bold;
+}
+
+#packedMessage {
+  color: #315b49;
+  font-weight: bold;
+}
+
+/* Contact form */
+form {
+  max-width: 500px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aebbb0;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 15px;
+}
+
+#formMessage {
+  font-weight: bold;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+  .tips {
+    flex-direction: column;
+  }
+}
