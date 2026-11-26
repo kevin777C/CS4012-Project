@@ -1,4 +1,4 @@
-// plan.js - Travel Budget Calculator
+// js/plan.js - Travel Budget Calculator
 
 // This function works out the total and the cost per person.
 // It runs every time the visitor types in the form.
